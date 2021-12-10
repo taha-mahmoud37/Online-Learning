@@ -1,4 +1,4 @@
-import { NgModule} from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +20,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
     declarations: [
@@ -45,11 +46,12 @@ import { ContactComponent } from './contact/contact.component';
         NzCarouselModule,
         FormsModule,
         CarouselModule,
-        AboutModule
+        AboutModule,
+        NgxSpinnerModule,
     ],
     
-    exports:[WelcomeComponent],
     providers: [],
-    bootstrap: [AppComponent]
+    bootstrap: [AppComponent],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppModule { }

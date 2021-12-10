@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import * as AOS from 'aos';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
     selector: 'app-root',
@@ -10,7 +11,17 @@ export class AppComponent implements OnInit{
     title = 'learning';
 
     // eslint-disable-next-line @typescript-eslint/no-empty-function
-    constructor(){
+    constructor(private spinner: NgxSpinnerService) {
+
+        /** spinner starts on init */
+        this.spinner.show();
+
+        setTimeout(() => {
+            /** spinner ends after 4 seconds */
+         
+            this.spinner.hide();
+        }, 4000);
+  
 
    
     }

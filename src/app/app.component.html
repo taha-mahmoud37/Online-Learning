@@ -4,7 +4,16 @@
 
 <app-footer></app-footer>
 
-
-<button class = "btn btn-top" (click) = "scrollTop()">
-    <i class="fas fa-long-arrow-alt-up"></i>
+<button class="btn btn-top" (click)="scrollTop()">
+  <i class="fas fa-long-arrow-alt-up"></i>
 </button>
+
+<ngx-spinner
+  [fullScreen]="true"
+  type="ball-fussion"
+  size="large"
+  bdColor="#fff"
+  color="rgba(247,163,16,0.85)"
+  
+>
+</ngx-spinner>

@@ -25,6 +25,7 @@
     "bootstrap": "^5.1.3",
     "ng-zorro-antd": "^12.0.2",
     "ngx-owl-carousel-o": "^6.0.1",
+    "ngx-spinner": "^13.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
