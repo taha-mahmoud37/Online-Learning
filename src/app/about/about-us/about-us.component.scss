@@ -1,0 +1,715 @@
+@import '../../Scss/utils/colors';
+@import '../../Scss/utils/fonts';
+@import '../../Scss/utils/spacing';
+@import '../../Scss/utils/mixins';
+@import '../../Scss/components/heads';
+
+/*-----------------------------------------about-head----------------------------*/
+
+.about-head {
+    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('../../../assets/images/6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+
+    .about-content {
+        height: 100%;
+        text-align: center;
+        h1 {
+            color: $color_main;
+            font-size: $fontSize_large + .9rem;
+            font-weight: $font-weight3;
+            letter-spacing: 2px;
+        }
+
+        .about-links {
+            ul {
+                position: relative;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $color_main;
+                        font-size: $fontSize_small + .6rem;
+                        font-weight: $font-weight1;
+                        @include transition(.33s, color);
+                    }
+                    .home:hover {
+                        color: $color_span;
+                    }
+                }
+                .after::after {
+                      position: absolute;
+                      content: '/';
+                      top: 7px;
+                      color: $color_main;
+                      font-size: $fontSize_small + .2rem;
+                }
+            }
+            
+        }
+    }
+}
+
+/*-----------------------------------------about-head----------------------------*/
+
+
+
+
+
+
+
+/*----------------------------------section welcome--------------------------------*/
+.welcome {
+    .welcome-title {
+        h1 {
+            font-size:$fontSize_large;
+            font-family: sans-serif;
+            font-weight: $font-weight3;
+            color: $color_secondry;
+            span {
+                font-size: $fontSize_large;
+                font-family: $font-family4;
+                color: $color_content3;
+                span {
+                    color: $color_span;
+                }
+            }
+        }
+    
+        p {
+            color: $color_content2;
+            font-size: $fontSize_small + .1rem;
+            font-weight: $font-weight1;
+        }
+    }
+
+    .brdr {
+       
+        .welcome-body {
+            border: 1px solid #f2f2f2;
+            border-radius: 3px;
+            .icon {
+                width: 100px;
+                margin: auto;
+                i {
+                    background-color: $color_content3;
+                    padding: 20px;
+                    position: relative;
+                    border-radius:50% ;
+                    bottom: $space_large ;
+                    box-shadow: 0px 0px 0px 6px #e8f7eb;
+                    
+                }
+            }
+            h3 {
+                @include fontAll($fontSize_mid, $font-weight2, sans-serif );
+                @include transition(.33s, color);
+                padding-bottom: 10px;
+
+
+                &:hover {
+                    color: $color_content3;
+                }
+            }
+
+            p {
+                color: $color_content2;
+                font-weight: $font-weight2;
+                font-family: $font-family3;
+                font-size: $fontSize_small + .1rem;
+                padding-bottom: $space_small;
+
+            }
+        }
+    }
+}
+
+
+/*----------------------------------section welcome--------------------------------*/
+
+/*----------------------------------our-history----------------------------------*/
+
+.our-history {
+    background-color: #f9f9f9;
+    .m-left {
+        padding-left: $space_large + $space_small;
+    }
+    .m-right {
+        padding-right: $space_large + $space_small;
+    }
+    .history-content {
+        .history-body {
+            p {
+                color: $color_content2;
+            }
+            h3 {
+                font-size: $fontSize_large;
+                font-weight: $font-weight2;
+
+            }
+            .p-body {
+                font-size: $fontSize_small;
+            }
+        }
+    }
+}
+
+/*----------------------------------our-history----------------------------------*/
+
+
+
+/*---------------------------------------section count----------------------------*/
+
+.count {
+    background-color: $counter-color;
+    .count-content {
+        .icons {
+            i {
+                color: $color_span ;
+                
+            }
+        }
+        .counter {
+            @include fontAll($fontSize_large, $font-weight3, sans-serif);
+            color: $color_main;
+        }
+        p {
+            color: $color_main;
+            @include fontAll( $fontSize_small + .2rem, 400, $font_family1);
+        }
+    }
+}
+
+/*---------------------------------------section count----------------------------*/
+
+
+
+
+/*---------------------------------------section instructor----------------------------*/
+
+.instructor {
+    .instructor-head {
+        @extend .head;
+
+        p {
+            position: relative;
+            bottom: .8rem;
+            font-size: $fontSize_small + .1rem;
+
+        }
+    }
+    .card {
+        cursor: pointer;
+        .img-cover {
+            position: relative;
+
+            .cover-icon {
+                width: 100%;
+                height: 98% !important;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background-color: rgba(247,163,16,0.85);
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 0;
+                @include transition(.5s, all);
+                i {
+                    margin-right: 10px;
+                    width: $space_mid;
+                    height: $space_mid;
+                    color: $color_main;
+                    text-align: center;
+                    line-height:2;
+                    border: 2px solid $color_main;
+                    border-radius: 50%;
+                    font-weight: $font-weight1;
+                    @include transition(.33s, all);
+
+                    &:hover {
+                        color: rgba(247,163,16,0.85);
+                        background-color: $color_main;
+                    }
+                }
+            }
+
+
+            &:hover .cover-icon{
+                opacity: 1;
+            }
+
+        }
+        .card-body {
+        
+            h5 {
+                @include fontAll($fontSize_small + .5rem, $font-weight1, $font-family-alt);
+            }
+            p {
+                position: relative;
+                bottom: 9px;
+                font-size: .9rem;
+                font-family: $font-family-alt;
+                color: rgba(0,0,0,0.60);;
+            }
+        }
+
+    }
+}
+
+
+/*---------------------------------------section instructor----------------------------*/
+
+
+
+
+/*---------------------------------------section instructor----------------------------*/
+
+.customer {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('../../../assets/images/3.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .customer-head {
+        @extend .head;
+        text-align: center;
+        p {
+            font-weight: 400 !important;
+        }
+
+    }
+    .content-carusol {
+        background-color: $color_main;
+        padding: $space_mid $space_mid;
+        width: 95%;
+
+        .customer-title {
+            h4 {
+                color: $color_secondry;
+                @include fontAll($fontSize_small +.2rem, $font-weight1, $font-family-alt);
+                text-transform: uppercase;
+            }
+            p {
+                position: relative;
+                bottom: 6px;
+                color: rgba(0,0,0,0.60);
+                font-size: $fontSize_small;
+                font-weight:$font-weight1;
+            }
+        }
+        .course-info {
+            position: relative;
+            bottom: 6px;
+            article {
+                @include fontAll($fontSize_small, $font-weight1, $font-family-alt);
+                color: rgba(0,0,0,0.80);
+                line-height:30px;
+            }
+            .stars {
+                color: $color_span;
+                i {
+                    padding-right: 5px;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+/*---------------------------------------section instructor----------------------------*/
+
+
+
+
+/*---------------------------------------section carouselPicture----------------------------*/
+.img-poster {
+    width: 70%;
+    border: 1px solid #ebebeb;
+    padding: 15px 25px;
+    img {
+        opacity: .4;
+        @include transition(.33s, opacity);
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+/*---------------------------------------section carouselPicture----------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px) and (min-width: 992px) {
+    /*-------------------section welcome----------------- */
+    .welcome {
+        .brdr {
+            .welcome-body {
+                p {
+                    font-size: $fontSize_small;
+                    br {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+    /*-------------------section welcome----------------- */
+
+    /*-------------------section history----------------- */
+    .our-history {
+ 
+        .history-content {
+            .p-body {
+                br {
+                    display: none !important;
+                }
+            }
+        }
+        
+    }
+    /*-------------------section history----------------- */
+
+
+    /*---------------------------------------section carouselPicture----------------------------*/
+    .img-poster {
+        
+        margin-left: auto ;
+        margin-right:auto ;
+    }
+    /*---------------------------------------section carouselPicture----------------------------*/
+
+    
+}
+
+
+
+@media (max-width: 992px) and (min-width: 768px) {
+    
+    /*-------------------section welcome----------------- */
+    .welcome {
+        .brdr {
+            .welcome-body {
+                margin: auto !important;
+                p {
+                    font-size: $fontSize_small;
+                    br {
+                        display: none !important;
+                    }
+                }
+
+            }
+        }
+    }
+    /*-------------------section welcome----------------- */
+
+    /*-------------------section history----------------- */
+    .our-history {
+        .m-left {
+            padding-left: .5rem;
+        }
+        .m-right {
+            padding-right: .5rem;
+        }
+        .history-content {
+            .p-body {
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    /*-------------------section history----------------- */
+
+
+
+    /*-------------------section instructor----------------- */
+    .instructor {
+        .card {
+            .img-cover {
+                .cover-icon {
+                    height: 99% !important;
+                }
+        }
+        }
+    }
+    /*-------------------section instructor----------------- */
+    /*---------------------------------------section carouselPicture----------------------------*/
+    .img-poster {
+        
+        margin-left: auto ;
+        margin-right:auto ;
+    }
+    /*---------------------------------------section carouselPicture----------------------------*/
+
+
+}
+
+
+
+@media (max-width:768px) and (min-width: 576px) {
+
+    /*-------------------section history----------------- */
+    .our-history {
+        .m-left {
+            padding-left: .5rem;
+        }
+        .m-right {
+            padding-right: .5rem;
+        }
+        .history-content {
+            .p-body {
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    /*-------------------section history----------------- */
+
+
+    /*-------------------section count----------------- */
+
+    .count {
+        .count-content {
+            .icons {
+                i {
+                    font-size: $fontSize_mid + .8rem !important;
+                }
+            }
+
+            .counter {
+                font-size: $fontSize_mid + .5rem;       
+            }
+        }
+    }
+
+    /*-------------------section count----------------- */
+
+
+}
+
+
+@media (max-width: 576px) and (min-width: 400px) {
+
+
+    .about-head {
+        .about-content {
+            h1 {
+                font-size: $fontSize_mid + .8rem;
+            }
+        }
+    }
+
+
+    /*-------------------section welcome----------------- */
+    .welcome {
+        .welcome-title {
+            br {
+                display: none !important;
+            }
+        }
+    }
+    /*-------------------section welcome----------------- */
+
+    /*-------------------section history----------------- */
+    .our-history {
+        .m-left {
+            padding-left: $space_small;
+        }
+        .m-right {
+            padding-right: $space_small;
+        }
+        .history-content {
+            .p-body {
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    /*-------------------section history----------------- */
+
+
+    /*-------------------section instructor----------------- */
+    .instructor {
+        .card {
+            .img-cover {
+                .cover-icon {
+                    height: 99% !important;
+                }
+        }
+        }
+    }
+    /*-------------------section instructor----------------- */
+
+
+    /*---------------------------------------section customer----------------------------*/
+    .customer {
+        height: auto;
+        .customer-head {
+            p {
+                br {
+                    display: none;
+                }
+            }
+        }
+        .content-carusol {
+            margin-left: auto;
+            margin-right:auto ;
+            flex-direction: column; 
+            justify-content: center;
+            img {
+                width: 100px;
+                height: 100px;
+                margin-right: auto;
+                margin-left: auto;
+                margin-bottom: 15px;
+            }
+            .customer-title {
+                text-align: center;
+            }
+            .course-info {
+                text-align: center;
+            }
+        }
+    }
+    /*---------------------------------------section customer----------------------------*/
+
+    /*---------------------------------------section carouselPicture----------------------------*/
+    .img-poster {
+        
+        margin-left: auto ;
+        margin-right:auto ;
+    }
+    /*---------------------------------------section carouselPicture----------------------------*/
+
+    
+
+}
+
+
+
+@media (max-width: 400px) and (min-width: 300px) {
+    
+
+    .about-head {
+        .about-content {
+            h1 {
+                font-size: $fontSize_mid + .8rem;
+            }
+        }
+    }
+
+
+
+
+     /*-------------------section welcome----------------- */
+     .welcome {
+        .welcome-title {
+            br {
+                display: none !important;
+            }
+        }
+    }
+    /*-------------------section welcome----------------- */
+ 
+    /*-------------------section history----------------- */
+    .our-history {
+        .m-left {
+            padding-left: $space_small;
+        }
+        .m-right {
+            padding-right: $space_small;
+        }
+        .history-content {
+            .p-body {
+                br {
+                    display: none;
+                }
+            }
+        }
+        
+    }
+    /*-------------------section history----------------- */
+
+
+    /*-------------------section instructor----------------- */
+    .instructor {
+        .card {
+            .img-cover {
+                .cover-icon {
+                    height: 98% !important;
+                }
+        }
+        }
+    }
+    /*-------------------section instructor----------------- */
+
+
+    /*---------------------------------------section customer----------------------------*/
+    .customer {
+    height: auto;
+    .customer-head {
+        p {
+            br {
+                display: none;
+            }
+        }
+    }
+    .content-carusol {
+        margin-left: auto;
+        margin-right:auto ;
+        flex-direction: column; 
+        justify-content: center;
+        img {
+            width: 100px;
+            height: 100px;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 15px;
+        }
+        .customer-title {
+            text-align: center;
+        }
+        .course-info {
+            text-align: center;
+        }
+    }
+    }
+    /*---------------------------------------section customer----------------------------*/
+    /*---------------------------------------section carouselPicture----------------------------*/
+    .img-poster {
+        
+        margin-left: auto ;
+        margin-right:auto ;
+    }
+    /*---------------------------------------section carouselPicture----------------------------*/
+    
+}

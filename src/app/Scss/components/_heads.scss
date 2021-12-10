@@ -1,0 +1,14 @@
+
+@import '../utils/mixins';
+
+.head {
+    h1 {
+        color: $color_secondry;
+        @include fontAll($fontSize_large, $font-weight3, $font-family-alt);
+    }
+    p {
+        font-size: $fontSize_small;
+        font-weight: $font-weight1;
+        color: $color_content2;
+    }
+}

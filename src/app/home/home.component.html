@@ -1,0 +1,796 @@
+<!---------------------------------home header------------------------>
+
+<header class="home-head py-3">
+  <nz-carousel
+    class="header-content"
+    [nzEffect]="'fade'"
+    [nzAutoPlay]="true"
+    [nzAutoPlaySpeed]="5000"
+  >
+    <div nz-carousel-content *ngFor="let index of array; let i = index">
+      <img [src]="index" alt="cover-onlineLearning" />
+      <div
+        class="cover-background"
+        *ngFor="let content of headContent; let j = index"
+      >
+        <div *ngIf="j == i">
+          <div class="cover-content">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              class="pb-3 text-white"
+            >
+              {{ content.hContent }}
+            </h1>
+            <p data-aos="fade-up" data-aos-duration="1000" class="pb-3">
+              <span>Explore LintSchool extensive,</span> world-class online
+              learning opportunities. We <br />
+              invite you to follow your intellectual curiosity.
+            </p>
+            <button
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="200"
+              class="btn mb-3"
+            >
+              see all Courses
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nz-carousel>
+</header>
+
+<!---------------------------------home header------------------------>
+
+
+
+
+<!---------------------------------welcome Component-------------------->
+<app-welcome></app-welcome>
+<!---------------------------------welcome Component-------------------->
+
+
+
+<!---------------------------------count Component-------------------->
+<app-count></app-count>
+<!---------------------------------count Component-------------------->
+
+
+
+<!---------------------------------Courses sectoin-------------------->
+<section class="courses container py-5">
+  <div class="courses-head py-5">
+    <h1 data-aos="fade-right" data-aos-duration="1000">Our Courses</h1>
+    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+      Find online courses and a wide range of related learning content from
+      across Educamp’s
+      <br />
+      online store, schools, initiatives, and programs.
+    </p>
+  </div>
+
+  <div class="row">
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-1.jpg"
+          class="img-fluid"
+          alt="Rashed kabir"
+        />
+        <div class="card-body">
+          <h6>By Rashed kabir</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">4.73</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            IT Security and Ethical <br />
+            Hacking Learn.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li>
+                <button class="btn">FREE</button>
+              </li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-2.jpg"
+          class="img-fluid"
+          alt="Jannatul Fa."
+        />
+        <div class="card-body">
+          <h6>By Rashed kabir</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">5.00</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            Acumen Presents: Krista <br />
+            Tippett On The Art.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li>
+                <button class="btn">FREE</button>
+              </li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-3.jpg"
+          class="img-fluid"
+          alt="Hasan Mulla"
+        />
+        <div class="card-body">
+          <h6>By Hasan Mulla</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">4.8</li>
+                <li class="text-muted">(546)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            Become A Professional <br />
+            IOS Developer.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer pb-1">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li class="price">$79 <sup>99</sup></li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-4.jpg"
+          class="img-fluid"
+          alt="Jubayer Mc"
+        />
+        <div class="card-body">
+          <h6>By Jubayer Mc</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">4.73</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            The Complete IOS <br />
+            Developer Course 2.0
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer pb-1">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li class="price">$79 <sup>99</sup></li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-right"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-5.jpg"
+          class="img-fluid"
+          alt="Jannatul Fa."
+        />
+        <div class="card-body">
+          <h6>By Rashed kabir</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">5.00</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            Acumen Presents: Krista <br />
+            Tippett On The Art.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer pb-1">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li class="price">$79 <sup class="bold">99</sup></li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-6.jpg"
+          class="img-fluid"
+          alt="Hasan Mulla"
+        />
+        <div class="card-body">
+          <h6>By Hasan Mulla</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">4.8</li>
+                <li class="text-muted">(546)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            Become A Professional <br />
+            IOS Developer.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer pb-1">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li class="price">$267</li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-7.jpg"
+          class="img-fluid"
+          alt="Jubayer Mc"
+        />
+        <div class="card-body">
+          <h6>By Jubayer Mc</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">4.73</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            The Complete IOS <br />
+            Developer Course 2.0
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li>
+                <button class="btn">FREE</button>
+              </li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-lg-3 col-md-6 col-sm-6 mb-3"
+      data-aos="fade-left"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+    >
+      <div class="card">
+        <img
+          src="assets/images/courses-8.jpg"
+          class="img-fluid"
+          alt="Jannatul Fa."
+        />
+        <div class="card-body">
+          <h6>By Rashed kabir</h6>
+          <div class="star-content d-flex">
+            <div class="stars pe-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <div>
+              <ul class="list-unstyled d-flex">
+                <li class="pe-1">5.00</li>
+                <li class="text-muted">(1,670)</li>
+              </ul>
+            </div>
+          </div>
+          <p class="card-text">
+            Acumen Presents: Krista <br />
+            Tippett On The Art.
+          </p>
+          <div class="brdr mb-3"></div>
+          <div class="course-footer">
+            <ul
+              class="
+                list-unstyled
+                d-flex
+                justify-content-evenly
+                align-items-center
+              "
+            >
+              <li>
+                <button class="btn">FREE</button>
+              </li>
+              <li>
+                <i class="fas fa-user pe-1"></i>
+                2,680
+              </li>
+              <li>
+                <i class="far fa-comments"></i>
+                13
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!---------------------------------Courses sectoin-------------------->
+
+
+
+<!----------------------------------Customer compononent------------------------------------->
+
+<app-customer></app-customer>
+
+<!----------------------------------Customer compononent------------------------------------->
+
+
+
+<!----------------------------------Event section------------------------------------->
+
+<section class="event container py-5">
+  <div class="event-head pt-5">
+    <h1 data-aos="fade-right" data-aos-duration="1000">Upcoming Event</h1>
+    <p data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+      See our upcoming event and check all the event by click on the view all
+      button
+    </p>
+  </div>
+  <div class="row mt-5" data-aos="fade-right" data-aos-duration="1000">
+    <div class="col-lg-6 col-md-12">
+      <img
+        src="assets/images/event-1.png"
+        class="img-fluid"
+        alt="event-picture"
+      />
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="event-content">
+        <h2 class="pt-4">
+          Turning Leads Into Guests With <br />
+          Content & IOS Process.
+        </h2>
+        <ul class="list-unstyled d-flex">
+          <li class="pe-4">
+            <i class="far fa-clock pe-2"></i>
+            April 28, 2022
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt pe-2"></i>
+            Cairo, Egypt
+          </li>
+        </ul>
+        <article class="pb-3">
+          The goal of every tourist website is to turn potential lead into
+          guests <br />
+          by guiding them to the end of the booking process. This event we will
+          <br />
+          discuss about the process of UI/UX and how to...
+        </article>
+        <button class="btn pb-4">View Details ></button>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-3" data-aos="fade-left" data-aos-duration="1000">
+    <div class="col-lg-6 col-md-12">
+      <img
+        src="assets/images/event-2.png"
+        class="img-fluid"
+        alt="event-picture"
+      />
+    </div>
+
+    <div class="col-lg-6 col-md-12">
+      <div class="event-content">
+        <h2 class="pt-4">
+          Turning Leads Into Guests With <br />
+          Content & IOS Process.
+        </h2>
+        <ul class="list-unstyled d-flex">
+          <li class="pe-4">
+            <i class="far fa-clock pe-2"></i>
+            May 09, 2015
+          </li>
+          <li>
+            <i class="fas fa-map-marker-alt pe-2"></i>
+            Cairo, Egypt
+          </li>
+        </ul>
+        <article class="pb-3">
+          The goal of every tourist website is to turn potential lead into
+          guests <br />
+          by guiding them to the end of the booking process. This event we will
+          <br />
+          discuss about the process of UI/UX and how to...
+        </article>
+        <button class="btn pb-4">View Details ></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!----------------------------------Event section------------------------------------->
+
+
+
+<!----------------------------------news section------------------------------------->
+
+<section class="news py-5">
+  <div class="container">
+    <div class="news-head pt-5 pb-4">
+      <h1 data-aos="fade-right"
+      data-aos-duration="1000" 
+      
+      >Recent News</h1>
+      <p data-aos="fade-right"
+      data-aos-duration="1000" 
+      data-aos-delay="100">
+        See what’s going on inside our company and stay in touch by informe.
+      </p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-right"
+      data-aos-duration="1000" >
+        <div class="card">
+          <img
+            src="assets/images/news-1.jpg"
+            class="img-fluid"
+            alt="Rashed kabir"
+          />
+          <div class="card-body">
+            <h3>How to Become Master In IOS within a Months.</h3>
+            <p class="card-text">
+              Apple Inc has decided to launchs much to awaited Apple Watchin
+              month of april & has already received around...
+            </p>
+            <div class="news-footer">
+              <ul
+                class="
+                  list-unstyled
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <li>
+                  <i class="far fa-clock pe-1"></i>
+                  2,680
+                </li>
+                <li>
+                  <i class="far fa-heart"></i>
+                  13
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-down"
+      data-aos-duration="1000">
+        <div class="card">
+          <img
+            src="assets/images/news-2.jpg"
+            class="img-fluid"
+            alt="Rashed kabir"
+          />
+          <div class="card-body">
+            <h3>How to Become Master In IOS within a Months.</h3>
+            <p class="card-text">
+              Apple Inc has decided to launchs much to awaited Apple Watchin
+              month of april & has already received around...
+            </p>
+            <div class="news-footer">
+              <ul
+                class="
+                  list-unstyled
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <li>
+                  <i class="far fa-clock pe-1"></i>
+                  2,680
+                </li>
+                <li>
+                  <i class="far fa-heart"></i>
+                  13
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-left"
+      data-aos-duration="1000">
+        <div class="card">
+          <img
+            src="assets/images/news-3.jpg"
+            class="img-fluid"
+            alt="Rashed kabir"
+          />
+          <div class="card-body">
+            <h3>How to Become Master In IOS within a Months.</h3>
+            <p class="card-text">
+              Apple Inc has decided to launchs much to awaited Apple Watchin
+              month of april & has already received around...
+            </p>
+            <div class="news-footer">
+              <ul
+                class="
+                  list-unstyled
+                  d-flex
+                  justify-content-between
+                  align-items-center
+                "
+              >
+                <li>
+                  <i class="far fa-clock pe-1"></i>
+                  2,680
+                </li>
+                <li>
+                  <i class="far fa-heart"></i>
+                  13
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!----------------------------------news section------------------------------------->
+
+
+
+
+<!----------------------------------instructor section------------------------------------->
+
+<section class="instructor container py-5">
+  <div class="row my-5 py-5" data-aos="fade-up"
+  data-aos-duration="1500">
+    <div
+      class="col-md-12 py-5 d-flex justify-content-center align-items-center"
+    >
+      <div class="instructor-content text-center">
+        <h1>Become A Instructor</h1>
+        <p>Join our creative community to spread your skill over world</p>
+        <button class="btn">get started now</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!----------------------------------instructor section------------------------------------->
+
+
+
+
+<!----------------------------------Carousel picture Component------------------------------------->
+<app-carouselpicture></app-carouselpicture>
+<!----------------------------------Carousel picture Component------------------------------------->

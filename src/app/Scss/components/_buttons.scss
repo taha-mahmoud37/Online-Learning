@@ -1,0 +1,28 @@
+@import '../utils/mixins';
+@import '../utils/colors';
+@import '../utils/spacing';
+
+.non-shadow{
+    box-shadow: none;
+    outline: none;
+    border:none;
+    border-radius: 0;
+}
+
+.btns {
+    color: $color_main;
+    font-size: $fontSize_small;
+    font-weight: $font-weight2;
+    font-family: $font-family1;
+    text-transform: uppercase;
+    border: 2px solid $color_main;
+    padding: 20px 40px;
+    @extend .non-shadow;
+    
+
+    &:hover {
+        background-color: $color_content3;
+        border-color: $color_content3 !important;
+
+    }
+}

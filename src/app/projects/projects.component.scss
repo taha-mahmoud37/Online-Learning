@@ -1,0 +1,197 @@
+
+
+@import '../Scss/utils/colors';
+@import '../Scss/utils/fonts';
+@import '../Scss/utils/mixins';
+@import '../Scss/utils/spacing';
+@import '../Scss/components/buttons';
+@import '../Scss/components/heads';
+
+
+
+/*-----------------------------------------about-head----------------------------*/
+
+.project-head {
+    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url('../../assets/images/6.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+
+    .project-content {
+        height: 100%;
+        text-align: center;
+        h1 {
+            color: $color_main;
+            font-size: $fontSize_large + .9rem;
+            font-weight: $font-weight3;
+            letter-spacing: 2px;
+        }
+
+        .project-links {
+            ul {
+                position: relative;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: $color_main;
+                        font-size: $fontSize_small + .6rem;
+                        font-weight: $font-weight1;
+                        @include transition(.33s, color);
+                    }
+                    .home:hover {
+                        color: $color_span;
+                    }
+                }
+                .after::after {
+                      position: absolute;
+                      content: '/';
+                      top: 7px;
+                      color: $color_main;
+                      font-size: $fontSize_small + .2rem;
+                }
+            }
+            
+        }
+    }
+}
+
+/*-----------------------------------------about-head----------------------------*/
+
+
+/*-----------------------------------------section all----------------------------*/
+.gallery {
+
+    .navigate {
+        border-bottom: 1px solid #e9e9e9 ;
+        ul {
+            .page-navigate {
+                a {
+                    @include fontAll($fontSize_small + .2rem, $font-weight3, $font-family1);
+                    text-transform: capitalize;
+                    color: #9f9f9f;
+                }
+                .page-links {
+                    color: #ff7417;
+                }
+            }
+        }
+    }
+
+
+    
+    .all {
+        .all-img {
+            position: relative;
+            overflow: hidden;
+            .overlay {
+                width: 220px;
+                height: 200px;
+                background-color: rgba(247,157,0,0.85);
+                position: absolute;
+                top: 6px;
+                left: 20px;
+                text-align: center;
+                @include transforms(scale(0,0));
+                @include transition(.55s,all);
+    
+                .overlay-body {
+                    padding-top: $space_large;
+                    h5 {
+                        padding-top: 20px;
+                        @include fontAll(fontSize_small, $font-weight3, $font-family1);
+                    }
+                }
+            }
+            &:hover .overlay {
+                @include transforms(scale(1,1));
+            }
+        }
+    }
+}
+/*-----------------------------------------section all----------------------------*/
+
+
+#events {
+    display: none;
+}
+
+#presentation {
+    display: none;
+}
+
+#seminar {
+    display: none;
+}
+
+#workshop {
+    display: none;
+}
+
+
+
+
+
+
+@media (max-width:768px) and (min-width: 576px) {
+
+    .all {
+        .all-img {
+            .overlay {
+                
+                width: 205px !important;
+                height: 188px !important;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+
+@media (max-width:576px) and (min-width: 300px) {
+    .gallery {
+        .navigate {
+            ul {
+                justify-content: center;
+                flex-wrap: wrap;
+                .page-navigate {
+                    width: 22% !important;
+                    padding-bottom: 10px;
+                    a {
+                        font-size: $fontSize_small;
+                        font-weight: $font-weight3;
+                    }
+                }
+            }
+        
+        }
+            .row {
+                .col-lg-3 {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .all-img {
+                .overlay {
+                    height: 208px !important;
+                }
+            }
+    }
+}
+
+@media (max-width:400px) and (min-width: 300px) {
+    .project-head {
+        .project-content {
+            h1 {
+                font-size: $fontSize_mid + .8rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,645 @@
+@import '../Scss/utils/colors';
+@import '../Scss/utils/fonts';
+@import '../Scss/utils/mixins';
+@import '../Scss/utils/spacing';
+@import '../Scss/components/buttons';
+@import '../Scss/components/heads';
+
+
+
+
+
+
+/*--------------------------------------section header----------------------------------*/
+
+
+
+header {
+    
+      .header-content {
+        @include dimansion(100%, 590px);
+        text-align: center;
+        position: relative;
+        background-size: cover;
+        background-image: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,1));
+        img {
+            @include dimansion(100%, 100%);
+            user-select: none;
+            opacity: 0.9 !important;
+
+        }
+        .cover-background {
+            background-size: cover;
+            position: absolute ;
+            width: 100%;
+            bottom: 30%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            h1 {
+                color: $color_main !important;
+                font-size: $fontSize_large + .4rem ;
+                font-family: $font-family1;
+                font-weight: $font-weight3;
+            }
+            p {
+                font-size: $fontSize_small + .2rem;
+                font-family: $font-family2;
+                font-weight: $font-weight3;
+                color: $color_main;
+
+                span {
+                    font-size: $fontSize_mid + .2rem;
+                    font-weight: $font-weight3;
+                    color: $color_content3;
+
+                }
+            }
+            .btn {
+                @extend .btns;
+                @include transition(.35s, all)
+            }
+            
+        }
+      }
+}
+
+/*--------------------------------------section header----------------------------------*/
+
+
+/*------------------------------ section courses-----------------*/
+
+.courses {
+    .courses-head {
+        @extend .head;
+    }
+
+    .card {
+        .card-body {
+            h6 {
+                color: $color_content2;
+                font-family: $font-family-alt;
+                font-weight: $font-weight1;
+                padding-bottom: 2px;
+            }
+            .star-content {
+                .stars {
+                    color: $color_span;
+                }
+                ul .pe-1 {
+                    color: $color_secondry;
+                    @include fontAll ($fontSize_small, 400,  $font-family-alt);
+                }
+            }
+            .card-text {
+                @include fontAll($fontSize_small+ .1rem, $font-weight1, $font-family-alt)
+            }
+            .brdr { 
+                width: 100%;
+                border-bottom:1px solid  #e9e9e9;
+            }
+
+            .course-footer {
+                button {
+                    @extend .non-shadow;
+                    background-color: $color_content3;
+                    color: $color_main;
+                    padding: 5px 17px;
+
+                }
+                li {
+                    font-size: $fontSize_small;
+                    font-weight: $font-weight1;
+                    i {
+                        color: rgba(0,0,0,0.60);
+                        color: #cccccc;
+                    }
+                }
+                .price {
+                    font-size: $fontSize_small + .2rem;
+                    font-weight: $font-weight3;
+                    font-family: $font-family1;
+                    color: $color_secondry;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------ section courses-----------------*/
+
+
+/*------------------------------ section courses-----------------*/
+
+.event {
+    .event-head {
+        @extend .head;
+        p {
+            position: relative;
+            bottom: 6px;
+            font-size: $fontSize_small + .1rem;
+        }
+    }
+    .row {
+        border: 1px solid $brdr-color ;
+        .event-content {
+            padding-left: $space_mid;
+            h2 {
+                font-size: $fontSize_mid + .1rem;
+                font-weight: $font-weight1 + 100;
+                letter-spacing: 1px;
+                padding-bottom: 10px;
+                @include transition(.33s, color);
+
+                &:hover {
+                    color: $color_content3;
+                }
+            }
+            article {
+                font-weight: 400;
+                color: $color-content2;
+                line-height: 1.8em;
+            }
+            .btn {
+                @extend .non-shadow;
+                color: $color_span;
+                font-weight: $font-weight1;
+                @include transition(.33s, color);
+
+                &:hover {
+                    color: $color_content3;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------ section courses-----------------*/
+
+
+
+/*------------------------------ section news-----------------*/
+.news {
+    background-color: #f5f5f5;
+    .news-head {
+        @extend .head;
+        p {
+            position: relative;
+            bottom: 6px;
+        }
+    }
+
+    .card {
+        .card-body {
+            h3 {
+                font-family: 'segoe ui light';
+                font-weight: $font-weight3;
+                padding-bottom: 10px;
+                @include transition(.33s, color);
+                cursor: pointer;
+
+                &:hover {
+                    color: $color_content3;
+                }
+            }
+            p {
+                color: $color_content2;
+                font-size: $fontSize_small;
+            }
+            li {
+                font-size: $fontSize_small;
+                font-weight: $font-weight1;
+                i {
+                    color: rgba(0,0,0,0.60);
+                    color: #cccccc;
+                }
+            }
+        }
+    }
+}
+/*------------------------------ section news-----------------*/
+
+
+/*------------------------------ section instructor-----------------*/
+
+
+.instructor {
+    .row {
+        border: 1px solid $brdr-color ;
+
+        .instructor-content  {
+            h1 {
+                color: $color_secondry;
+                font-size: 3.3rem;
+                font-weight: $font-weight2;
+            }
+            p {
+                @include fontAll($fontSize_mid, $font-weight1, $font-family-alt);
+                color: $color_content2;
+            }
+            .btn {
+                background-color: $color_span;
+                @extend .btns;
+                border: 1px solid $color_span;
+                padding: .8rem 2.3rem;
+                @include transition(.33s, color);
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+
+
+/*------------------------------ section instructor-----------------*/
+
+
+
+
+
+
+@media (max-width: 1200px) and (min-width: 1024px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        .cover-background {
+            height: auto !important;
+            .cover-content {
+                h1 {
+                    padding-top: 4rem !important;
+                }
+            }
+            .btn {
+                font-size: $fontSize_small !important;
+                padding: 15px 15px !important;
+            }
+        }
+    }
+    /*-------------------section header----------------- */
+
+
+    .courses {
+        .card {
+            .card-body {
+                p {
+                    font-size: .9rem !important;
+                    br {
+                        display: none !important;
+                    }
+                }
+                .course-footer {
+                    button {
+                        @extend .non-shadow;
+                        background-color: $color_content3;
+                        color: $color_main;
+                        padding: 3px 17px !important;
+    
+                    }
+                }    
+            }
+        }
+    }
+
+}
+
+
+
+
+
+
+@media (max-width: 1024px) and (min-width: 992px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        .cover-background {
+            h1 {
+                font-size: $fontSize_mid + .3rem !important;
+            }
+            p {
+                font-size: $fontSize_small !important;
+                span {
+                        font-size: $fontSize_small + .2rem !important;
+                }
+            }
+            .btn {
+                font-size: $fontSize_small !important;
+                padding: 15px 15px !important;
+            }
+        }
+    }
+    /*-------------------section header----------------- */
+
+
+
+    /*-------------------section courses----------------- */
+
+    .courses {
+        .card {
+            .card-body {
+                p {
+                    font-size:$fontSize_small !important;
+                    br {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+    }
+
+    /*-------------------section courses----------------- */
+
+
+
+
+    
+}
+
+
+
+@media (max-width: 992px) and (min-width: 768px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        .cover-background {
+            h1 {
+                font-size: $fontSize_mid + .3rem !important;
+            }
+            p {
+                font-size: $fontSize_small !important;
+                span {
+                        font-size: $fontSize_small + .2rem !important;
+                }
+            }
+            .btn {
+                font-size: $fontSize_small !important;
+                padding: 15px 15px !important;
+            }
+        }
+    }
+    /*-------------------section header----------------- */
+
+
+    /*-------------------section event----------------- */
+    .event {
+        .row {
+            img {
+                width: 100%;
+            }
+            .event-content {
+                width: 100%;
+                article {
+                    br {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*-------------------section event----------------- */
+
+
+
+    
+
+
+   
+
+    
+
+    
+    
+
+}
+
+
+@media (max-width: 768px) and (min-width: 576px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        .cover-background {
+                
+            .cover-content {
+                position: relative;
+                top: $space_large + $space_small;
+                h1 {
+                    font-size: $fontSize_mid  !important;
+                }
+                p {
+                    font-size: $fontSize_small !important;
+                    span {
+                            font-size: $fontSize_small !important;
+                    }
+                }
+                .btn {
+                    font-size: $fontSize_small !important;
+                    padding: 15px 15px !important;
+                }
+            }
+        }
+    }
+    /*-------------------section header----------------- */
+    
+}
+
+
+@media (max-width: 576px) and (min-width: 400px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        img {
+            height: 280px;
+            width: 100% !important;
+        }
+        .cover-background {
+                
+            .cover-content {
+                position: relative;
+                top: $space_mid;
+                h1 {
+                    font-size: $fontSize_mid  !important;
+                }
+                p {
+                    display: none !important;
+                }
+                .btn {
+                    font-size: $fontSize_small !important;
+                    padding: 15px 15px !important;
+                }
+            }
+        }
+    }
+    /*-------------------section header----------------- */
+
+
+
+    /*-------------------section courses----------------- */
+
+    .courses {
+        
+            .courses-head {
+                p {
+                    
+                    br {
+                        display: none !important;
+                    }
+                }
+                   
+            }
+    }
+
+    /*-------------------section courses----------------- */
+
+
+
+    /*-------------------section event----------------- */
+    .event {
+        .row {
+            img {
+                width: 100%;
+            }
+            .event-content {
+                width: 100%;
+                article {
+                    br {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*-------------------section event----------------- */
+
+
+
+     /*-------------------section instructor----------------- */
+
+
+     .instructor {
+        .row {
+            .instructor-content  {
+                h1 {
+                    font-size: $fontSize_mid + .6rem;
+                }
+                p {
+                    font-size: $fontSize_small + .6rem;
+                }
+            }
+        }
+    }          
+
+
+     /*-------------------section instructor----------------- */
+  
+}
+
+
+
+@media (max-width: 400px) and (min-width: 300px) {
+    /*-------------------section header----------------- */
+    .header-content
+    {
+        height: auto !important;
+        img {
+            height: 200px !important;
+            width: 100% !important;
+        }
+        .cover-background {
+                
+            .cover-content {
+                position: relative;
+                top: $space_mid;
+                h1 {
+                    font-size: $fontSize_small + .2rem  !important;
+                }
+                p {
+                    display: none !important;
+                }
+                .btn {
+                    font-size: $fontSize_small !important;
+                    padding: 10px 10px !important;
+                }
+            }
+        }
+        .ant-carousel .slick-dots li button {
+            margin-top: 10px !important;
+        }
+        .ant-carousel .slick-dots-bottom {
+            bottom: 0px !important;
+        }
+    }
+    /*-------------------section header----------------- */
+   
+
+     /*-------------------section courses----------------- */
+
+    .courses {
+        
+        .courses-head {
+            p {
+                
+                br {
+                    display: none !important;
+                }
+            }
+               
+        }
+    }
+
+     /*-------------------section courses----------------- */
+    
+    /*-------------------section event----------------- */
+    .event {
+        .row {
+            img {
+                width: 100%;
+            }
+            .event-content {
+                width: 100%;
+                article {
+                    br {
+                        display: none !important;
+                    }
+                }
+            }
+        }
+
+    }
+
+    /*-------------------section event----------------- */
+ 
+     /*-------------------section instructor----------------- */
+
+
+     .instructor {
+        .row {
+            .instructor-content  {
+                h1 {
+                    font-size: $fontSize_mid + .2rem;
+                }
+                p {
+                    font-size: $fontSize_small + .1rem;
+                }
+            }
+        }
+    }          
+
+
+     /*-------------------section instructor----------------- */
+
+
+     :is(.courses-head, .event-head, .news-head ) h1 {
+         font-size: $fontSize_mid + .5rem;
+
+     }
+
+}

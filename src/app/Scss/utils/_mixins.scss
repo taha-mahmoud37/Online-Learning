@@ -1,0 +1,75 @@
+@import '../utils/fonts';
+
+
+@mixin  transition ($time, $property) {
+    -webkit-transition:$time $property;
+    -moz-transition:$time $property;
+    -o-transition:$time $property;
+    transition: $time $property;
+    
+}
+
+
+@mixin  mediaTitle ($property) {
+
+   @if $property == large or middle {
+    
+    .header-title {
+        .title-content {
+            width: 100%;
+            margin-bottom: .7rem;
+            justify-content: center;
+            ul {
+                
+                li {
+                    margin-bottom: .6rem;
+                }
+            }
+        }
+        .title-content2 {
+            
+            ul {
+                justify-content: center;
+                margin-bottom: 1rem;
+            }
+            .login {
+                padding-bottom: 0.8rem;
+                a {
+                    padding: 15px 25px !important;
+                    i {
+                        font-size: .8rem;
+                    }
+                }
+            }
+            
+        }
+    }
+
+   }
+
+}
+
+@mixin dimansion($width, $height) {
+    width: $width;
+    height: $height;
+    
+}
+
+
+@mixin fontAll($fontSize, $fontWieght, $fontFamily) {
+    font-size: $fontSize;
+    font-weight: $fontWieght;
+    font-family: $fontFamily;
+    
+}
+
+
+
+@mixin transforms ($scale) {
+    
+        -webkit-transform:$scale;
+        -moz-transform:$scale;
+        -ms-transform:$scale;
+        -o-transform:$scale;
+        transform: $scale;
+}        

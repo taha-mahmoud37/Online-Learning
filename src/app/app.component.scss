@@ -1,0 +1,38 @@
+@import 'Scss/utils/colors';
+@import 'Scss/utils/_fonts';
+@import 'Scss/components/buttons';
+@import 'Scss/utils/_spacing';
+@import 'Scss/utils/mixins';
+
+
+
+.shadow {
+    box-shadow: 1px 1px 1px #ddd ,  -1px -1px 1px #ddd;
+}
+
+.btn {
+    @extend .non-shadow;
+    position: fixed;
+    right: $space_mid;
+    bottom: $space_mid;
+    background-color: $bg-footer;
+    border-radius: 50%;
+    @include transition(.33s, all);
+    opacity: 0;
+    z-index: 99999;
+    i {
+        color: $color_main;
+        padding: .3rem .2rem;
+        font-size: $fontSize_small + .1rem;
+        text-align: center;
+    }
+
+    &:hover {
+        background-color: $color_content3;
+    }
+}
+
+.btn-show {
+    opacity: 1;
+
+}
