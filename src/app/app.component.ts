@@ -17,10 +17,10 @@ export class AppComponent implements OnInit{
         this.spinner.show();
 
         setTimeout(() => {
-            /** spinner ends after 4 seconds */
+            /** spinner ends after 5 seconds */
          
             this.spinner.hide();
-        }, 4000);
+        }, 5000);
   
 
    

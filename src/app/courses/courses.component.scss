@@ -1,231 +1,205 @@
-@import '../Scss/utils/colors';
-@import '../Scss/utils/fonts';
-@import '../Scss/utils/spacing';
-@import '../Scss/utils/mixins';
-@import '../Scss/components/heads';
-@import '../Scss/components/buttons';
+@import "../Scss/utils/colors";
+@import "../Scss/utils/fonts";
+@import "../Scss/utils/spacing";
+@import "../Scss/utils/mixins";
+@import "../Scss/components/heads";
+@import "../Scss/components/buttons";
 
-
+body {
+    overflow-x: hidden !important ;
+}
 
 /*-----------------------------------------about-head----------------------------*/
 
 .head-course {
-    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('../../assets/images/6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/images/6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 
-    .content-course {
-        height: 100%;
-        text-align: center;
-        h1 {
-            color: $color_main;
-            font-size: $fontSize_large + .9rem;
-            font-weight: $font-weight3;
-            letter-spacing: 2px;
-        }
-
-        .links-course {
-            ul {
-                position: relative;
-                li {
-                    a {
-                        text-decoration: none;
-                        color: $color_main;
-                        font-size: $fontSize_small + .6rem;
-                        font-weight: $font-weight1;
-                        @include transition(.33s, color);
-                    }
-                    .home:hover {
-                        color: $color_span;
-                    }
-                }
-                .after::after {
-                      position: absolute;
-                      content: '/';
-                      top: 7px;
-                      color: $color_main;
-                      font-size: $fontSize_small + .2rem;
-                }
-            }
-            
-        }
+  .content-course {
+    height: 100%;
+    text-align: center;
+    h1 {
+      color: $color_main;
+      font-size: $fontSize_large + 0.9rem;
+      font-weight: $font-weight3;
+      letter-spacing: 2px;
     }
+
+    .links-course {
+      ul {
+        position: relative;
+        li {
+          a {
+            text-decoration: none;
+            color: $color_main;
+            font-size: $fontSize_small + 0.6rem;
+            font-weight: $font-weight1;
+            @include transition(0.33s, color);
+          }
+          .home:hover {
+            color: $color_span;
+          }
+        }
+        .after::after {
+          position: absolute;
+          content: "/";
+          top: 7px;
+          color: $color_main;
+          font-size: $fontSize_small + 0.2rem;
+        }
+      }
+    }
+  }
 }
 
 /*-----------------------------------------about-head----------------------------*/
 
-
-
 /*------------------------------ section courses-----------------*/
 
 .courses {
-    
-
-    .card {
-        .card-body {
-            h6 {
-                color: $color_content2;
-                font-family: $font-family-alt;
-                font-weight: $font-weight1;
-                padding-bottom: 2px;
-            }
-            .star-content {
-                .stars {
-                    color: $color_span;
-                }
-                ul .pe-1 {
-                    color: $color_secondry;
-                    @include fontAll ($fontSize_small, 400,  $font-family-alt);
-                }
-            }
-            .card-text {
-                @include fontAll($fontSize_small+ .1rem, $font-weight1, $font-family-alt)
-            }
-            .brdr { 
-                width: 100%;
-                border-bottom:1px solid  #e9e9e9;
-            }
-
-            .course-footer {
-                button {
-                    @extend .non-shadow;
-                    background-color: $color_content3;
-                    color: $color_main;
-                    padding: 5px 17px;
-
-                }
-                li {
-                    font-size: $fontSize_small;
-                    font-weight: $font-weight1;
-                    i {
-                        color: rgba(0,0,0,0.60);
-                        color: #cccccc;
-                    }
-                }
-                .price {
-                    font-size: $fontSize_small + .2rem;
-                    font-weight: $font-weight3;
-                    font-family: $font-family1;
-                    color: $color_secondry;
-                }
-            }
+  .card {
+    .card-body {
+      h6 {
+        color: $color_content2;
+        font-family: $font-family-alt;
+        font-weight: $font-weight1;
+        padding-bottom: 2px;
+      }
+      .star-content {
+        .stars {
+          color: $color_span;
         }
-    }
+        ul .pe-1 {
+          color: $color_secondry;
+          @include fontAll($fontSize_small, 400, $font-family-alt);
+        }
+      }
+      .card-text {
+        @include fontAll(
+          $fontSize_small + 0.1rem,
+          $font-weight1,
+          $font-family-alt
+        );
+      }
+      .brdr {
+        width: 100%;
+        border-bottom: 1px solid #e9e9e9;
+      }
 
-    .pagination {
+      .course-footer {
+        button {
+          @extend .non-shadow;
+          background-color: $color_content3;
+          color: $color_main;
+          padding: 5px 17px;
+        }
         li {
-            a {
-                @extend .non-shadow;
-                border: 1px solid #cccccc;
-                color: #cccccc;
-                text-transform: uppercase;
-                font-weight: $font-weight1;
-                @include transition(.33s,all);
-                 &:hover {
-                    color: $color_span;
-                    background-color: transparent;
-                    border-color: $color_span;
-                 }
-            }
+          font-size: $fontSize_small;
+          font-weight: $font-weight1;
+          i {
+            color: rgba(0, 0, 0, 0.6);
+            color: #cccccc;
+          }
         }
-        li:nth-child(1) a {
-            color: $color_span;
-            border-color: $color_span !important;
+        .price {
+          font-size: $fontSize_small + 0.2rem;
+          font-weight: $font-weight3;
+          font-family: $font-family1;
+          color: $color_secondry;
         }
-
-        li:last-child a {
-            color: $color_main;
-            background-color: #393939;
-            border-color: #393939;
-            @include transition(.33s,all);
-            &:hover {
-                color: $color_span;
-                background-color: transparent;
-                border-color: $color_span;
-            }
-        }
-
-        
+      }
     }
+  }
+
+  .pagination {
+    li {
+      a {
+        @extend .non-shadow;
+        border: 1px solid #cccccc;
+        color: #cccccc;
+        text-transform: uppercase;
+        font-weight: $font-weight1;
+        @include transition(0.33s, all);
+        &:hover {
+          color: $color_span;
+          background-color: transparent;
+          border-color: $color_span;
+        }
+      }
+    }
+    li:nth-child(1) a {
+      color: $color_span;
+      border-color: $color_span !important;
+    }
+
+    li:last-child a {
+      color: $color_main;
+      background-color: #393939;
+      border-color: #393939;
+      @include transition(0.33s, all);
+      &:hover {
+        color: $color_span;
+        background-color: transparent;
+        border-color: $color_span;
+      }
+    }
+  }
 }
 
 /*------------------------------ section courses-----------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1200px) and (min-width: 1024px) {
-    .courses {
-        .card {
-            .card-body {
-                p {
-                    font-size: .9rem !important;
-                    br {
-                        display: none !important;
-                    }
-                }
-                .course-footer {
-                    button {
-                        @extend .non-shadow;
-                        background-color: $color_content3;
-                        color: $color_main;
-                        padding: 3px 17px !important;
-    
-                    }
-                }    
-            }
+  .courses {
+    .card {
+      .card-body {
+        p {
+          font-size: 0.9rem !important;
+          br {
+            display: none !important;
+          }
         }
+        .course-footer {
+          button {
+            @extend .non-shadow;
+            background-color: $color_content3;
+            color: $color_main;
+            padding: 3px 17px !important;
+          }
+        }
+      }
     }
-
+  }
 }
-
 
 @media (max-width: 1024px) and (min-width: 992px) {
+  /*-------------------section courses----------------- */
 
-    /*-------------------section courses----------------- */
-
-    .courses {
-        .card {
-            .card-body {
-                p {
-                    font-size:$fontSize_small !important;
-                    br {
-                        display: none !important;
-                    }
-                }
-            }
+  .courses {
+    .card {
+      .card-body {
+        p {
+          font-size: $fontSize_small !important;
+          br {
+            display: none !important;
+          }
         }
+      }
     }
+  }
 
-    /*-------------------section courses----------------- */
-
+  /*-------------------section courses----------------- */
 }
 
-
-@media (max-width:400px) and (min-width: 300px) {
-    .head-course {
-        .content-course {
-            h1 {
-                font-size: $fontSize_mid + .8rem;
-            }
-        }
+@media (max-width: 400px) and (min-width: 300px) {
+  .head-course {
+    .content-course {
+      h1 {
+        font-size: $fontSize_mid + 0.8rem;
+      }
     }
+  }
 }
-
-
-
-

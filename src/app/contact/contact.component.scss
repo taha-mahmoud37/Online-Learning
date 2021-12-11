@@ -1,161 +1,150 @@
+@import "../Scss/utils/colors";
+@import "../Scss/utils/fonts";
+@import "../Scss/utils/mixins";
+@import "../Scss/utils/spacing";
+@import "../Scss/components/buttons";
+@import "../Scss/components/heads";
 
-
-
-@import '../Scss/utils/colors';
-@import '../Scss/utils/fonts';
-@import '../Scss/utils/mixins';
-@import '../Scss/utils/spacing';
-@import '../Scss/components/buttons';
-@import '../Scss/components/heads';
-
-
+body {
+    overflow-x: hidden !important ;
+}
 
 /*-----------------------------------------contact-head----------------------------*/
 
 .contact-head {
-    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('../../assets/images/6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../assets/images/6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 
-    .contact-content {
-        height: 100%;
-        text-align: center;
-        h1 {
-            color: $color_main;
-            font-size: $fontSize_large + .9rem;
-            font-weight: $font-weight3;
-            letter-spacing: 2px;
-        }
-
-        .contact-links {
-            ul {
-                position: relative;
-                li {
-                    a {
-                        text-decoration: none;
-                        color: $color_main;
-                        font-size: $fontSize_small + .6rem;
-                        font-weight: $font-weight1;
-                        @include transition(.33s, color);
-                    }
-                    .home:hover {
-                        color: $color_span;
-                    }
-                }
-                .after::after {
-                      position: absolute;
-                      content: '/';
-                      top: 7px;
-                      color: $color_main;
-                      font-size: $fontSize_small + .2rem;
-                }
-            }
-            
-        }
+  .contact-content {
+    height: 100%;
+    text-align: center;
+    h1 {
+      color: $color_main;
+      font-size: $fontSize_large + 0.9rem;
+      font-weight: $font-weight3;
+      letter-spacing: 2px;
     }
+
+    .contact-links {
+      ul {
+        position: relative;
+        li {
+          a {
+            text-decoration: none;
+            color: $color_main;
+            font-size: $fontSize_small + 0.6rem;
+            font-weight: $font-weight1;
+            @include transition(0.33s, color);
+          }
+          .home:hover {
+            color: $color_span;
+          }
+        }
+        .after::after {
+          position: absolute;
+          content: "/";
+          top: 7px;
+          color: $color_main;
+          font-size: $fontSize_small + 0.2rem;
+        }
+      }
+    }
+  }
 }
 
 /*-----------------------------------------contact-head----------------------------*/
 
-
-
-
 /*-----------------------------------------contact-info----------------------------*/
 
 .contact-info {
-    .contact-body {
-        .head {
-            h1 {
-                font-family: $font-family1;
-            }
-            p {
-                font-weight: 400;
-            }
-        } 
-
-        .input {
-            label {
-                display: none;
-            }
-            .form-control {
-                @extend .non-shadow;
-                text-transform: capitalize;
-                padding: 15px;
-                background-color: #eff0f4;
-                color: #222222;
-                font-weight: $font-weight1;
-            }
-        }
-
-        .button {
-            .btn {
-                @extend .non-shadow;
-                background-color: #313131;
-                color: $color_main;
-                padding: $space_small $space_mid;
-                text-transform: uppercase;
-                font-weight: $font-weight2;
-                font-family: $font-family1;
-                @include transition(.23s, all);
-                &:hover {
-                    background-color: $color_content3;
-                }
-            }
-        }
+  .contact-body {
+    .head {
+      h1 {
+        font-family: $font-family1;
+      }
+      p {
+        font-weight: 400;
+      }
     }
 
-    .contant-connected {
-        .connect-head {
-            h1 {
-                color: $color_secondry;
-                @include fontAll($fontSize_large, $font-weight3, $font-family1);
-            }
-        }
-
-        .contact-icon {
-            .icon {
-                width: $space_large + .7rem;
-                height: $space_large + .7rem;
-                border: 2px solid #f2f2f2;
-                text-align: center;
-                line-height: $space_large + .3rem;
-                color: $color_span;
-                font-size: $fontSize_small + .5rem;
-                border-radius: 50%;
-                display: inline-block;
-            }
-        }
-        .flex-grow-1 {
-            margin-top: 10px;
-            color: $color_content2;
-            font-size: $fontSize_small ;
-            h4 {
-                font-size: .9rem;
-                font-family: $font-family1;
-                font-weight: $font-weight3;
-                color: $color_secondry;
-            }
-            
-        }
-
+    .input {
+      label {
+        display: none;
+      }
+      .form-control {
+        @extend .non-shadow;
+        text-transform: capitalize;
+        padding: 15px;
+        background-color: #eff0f4;
+        color: #222222;
+        font-weight: $font-weight1;
+      }
     }
+
+    .button {
+      .btn {
+        @extend .non-shadow;
+        background-color: #313131;
+        color: $color_main;
+        padding: $space_small $space_mid;
+        text-transform: uppercase;
+        font-weight: $font-weight2;
+        font-family: $font-family1;
+        @include transition(0.23s, all);
+        &:hover {
+          background-color: $color_content3;
+        }
+      }
+    }
+  }
+
+  .contant-connected {
+    .connect-head {
+      h1 {
+        color: $color_secondry;
+        @include fontAll($fontSize_large, $font-weight3, $font-family1);
+      }
+    }
+
+    .contact-icon {
+      .icon {
+        width: $space_large + 0.7rem;
+        height: $space_large + 0.7rem;
+        border: 2px solid #f2f2f2;
+        text-align: center;
+        line-height: $space_large + 0.3rem;
+        color: $color_span;
+        font-size: $fontSize_small + 0.5rem;
+        border-radius: 50%;
+        display: inline-block;
+      }
+    }
+    .flex-grow-1 {
+      margin-top: 10px;
+      color: $color_content2;
+      font-size: $fontSize_small;
+      h4 {
+        font-size: 0.9rem;
+        font-family: $font-family1;
+        font-weight: $font-weight3;
+        color: $color_secondry;
+      }
+    }
+  }
 }
-
 
 /*-----------------------------------------contact-info----------------------------*/
 
-
-@media (max-width:400px) and (min-width: 300px) 
-{
-    .contact-head {
-        .contact-content {
-            h1 {
-                font-size: $fontSize_mid + .8rem;
-            }
-        }
+@media (max-width: 400px) and (min-width: 300px) {
+  .contact-head {
+    .contact-content {
+      h1 {
+        font-size: $fontSize_mid + 0.8rem;
+      }
     }
-
+  }
 }

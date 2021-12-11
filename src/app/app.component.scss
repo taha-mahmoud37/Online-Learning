@@ -4,6 +4,10 @@
 @import 'Scss/utils/_spacing';
 @import 'Scss/utils/mixins';
 
+body
+{
+    overflow-x: hidden !important;
+}
 
 
 .shadow {
@@ -13,8 +17,8 @@
 .btn {
     @extend .non-shadow;
     position: fixed;
-    right: $space_mid;
-    bottom: $space_mid;
+    right: $space_small;
+    bottom: $space_small + .4rem;
     background-color: $bg-footer;
     border-radius: 50%;
     @include transition(.33s, all);

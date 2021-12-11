@@ -1,245 +1,215 @@
+@import "../../Scss/utils/colors";
+@import "../../Scss/utils/fonts";
+@import "../../Scss/utils/spacing";
+@import "../../Scss/utils/mixins";
+@import "../../Scss/components/heads";
+@import "../../Scss/components/buttons";
 
-@import '../../Scss/utils/colors';
-@import '../../Scss/utils/fonts';
-@import '../../Scss/utils/spacing';
-@import '../../Scss/utils/mixins';
-@import '../../Scss/components/heads';
-@import '../../Scss/components/buttons';
-
-
+body {
+    overflow-x: hidden !important ;
+}
 
 /*-----------------------------------------about-head----------------------------*/
 
 .teacher-head {
-    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('../../../assets/images/6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../../assets/images/6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 
-    .teacher-content {
-        height: 100%;
-        text-align: center;
-        h1 {
-            color: $color_main;
-            font-size: $fontSize_large + .9rem;
-            font-weight: $font-weight3;
-            letter-spacing: 2px;
-        }
-
-        .teacher-links {
-            ul {
-                position: relative;
-                li {
-                    a {
-                        text-decoration: none;
-                        color: $color_main;
-                        font-size: $fontSize_small + .6rem;
-                        font-weight: $font-weight1;
-                        @include transition(.33s, color);
-                    }
-                    .home:hover {
-                        color: $color_span;
-                    }
-                }
-                .after::after {
-                      position: absolute;
-                      content: '/';
-                      top: 7px;
-                      color: $color_main;
-                      font-size: $fontSize_small + .2rem;
-                }
-            }
-            
-        }
+  .teacher-content {
+    height: 100%;
+    text-align: center;
+    h1 {
+      color: $color_main;
+      font-size: $fontSize_large + 0.9rem;
+      font-weight: $font-weight3;
+      letter-spacing: 2px;
     }
+
+    .teacher-links {
+      ul {
+        position: relative;
+        li {
+          a {
+            text-decoration: none;
+            color: $color_main;
+            font-size: $fontSize_small + 0.6rem;
+            font-weight: $font-weight1;
+            @include transition(0.33s, color);
+          }
+          .home:hover {
+            color: $color_span;
+          }
+        }
+        .after::after {
+          position: absolute;
+          content: "/";
+          top: 7px;
+          color: $color_main;
+          font-size: $fontSize_small + 0.2rem;
+        }
+      }
+    }
+  }
 }
 
 /*-----------------------------------------about-head----------------------------*/
 
-
-
-
-
-
-
-
-
 /*---------------------------------------section instructor----------------------------*/
 
 .instructor {
-    .instructor-head {
-        @extend .head;
+  .instructor-head {
+    @extend .head;
 
-        p {
-            position: relative;
-            bottom: .8rem;
-            font-size: $fontSize_small + .1rem;
-
-        }
+    p {
+      position: relative;
+      bottom: 0.8rem;
+      font-size: $fontSize_small + 0.1rem;
     }
-    .card {
-        cursor: pointer;
-        .img-cover {
-            position: relative;
+  }
+  .card {
+    cursor: pointer;
+    .img-cover {
+      position: relative;
 
-            .cover-icon {
-                width: 100%;
-                height: 98% !important;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                background-color: rgba(247,163,16,0.85);
-                height: 100%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                opacity: 0;
-                @include transition(.5s, all);
-                i {
-                    margin-right: 10px;
-                    width: $space_mid;
-                    height: $space_mid;
-                    color: $color_main;
-                    text-align: center;
-                    line-height:2;
-                    border: 2px solid $color_main;
-                    border-radius: 50%;
-                    font-weight: $font-weight1;
-                    @include transition(.33s, all);
+      .cover-icon {
+        width: 100%;
+        height: 98% !important;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(247, 163, 16, 0.85);
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        @include transition(0.5s, all);
+        i {
+          margin-right: 10px;
+          width: $space_mid;
+          height: $space_mid;
+          color: $color_main;
+          text-align: center;
+          line-height: 2;
+          border: 2px solid $color_main;
+          border-radius: 50%;
+          font-weight: $font-weight1;
+          @include transition(0.33s, all);
 
-                    &:hover {
-                        color: rgba(247,163,16,0.85);
-                        background-color: $color_main;
-                    }
-                }
-            }
-
-
-            &:hover .cover-icon{
-                opacity: 1;
-            }
-
+          &:hover {
+            color: rgba(247, 163, 16, 0.85);
+            background-color: $color_main;
+          }
         }
-        .card-body {
-        
-            h5 {
-                @include fontAll($fontSize_small + .5rem, $font-weight1, $font-family-alt);
-            }
-            p {
-                position: relative;
-                bottom: 9px;
-                font-size: .9rem;
-                font-family: $font-family-alt;
-                color: rgba(0,0,0,0.60);;
-            }
-        }
+      }
 
+      &:hover .cover-icon {
+        opacity: 1;
+      }
     }
-
-    .button {
-        .btn {
-            @extend .non-shadow;
-            text-align: center;
-            border: 1px solid $color_pricing;
-            color: $color_pricing;
-            text-transform: uppercase;
-            padding: 15px 50px;
-            @include fontAll(.8rem, $font-weight2, 'segoe ui light' );
-            letter-spacing: 1px;
-            @include transition(.33s,all);
-
-            &:hover {
-                color: $color_main;
-                background-color: $color_pricing;
-            }
-        }
-
-
+    .card-body {
+      h5 {
+        @include fontAll(
+          $fontSize_small + 0.5rem,
+          $font-weight1,
+          $font-family-alt
+        );
+      }
+      p {
+        position: relative;
+        bottom: 9px;
+        font-size: 0.9rem;
+        font-family: $font-family-alt;
+        color: rgba(0, 0, 0, 0.6);
+      }
     }
+  }
+
+  .button {
+    .btn {
+      @extend .non-shadow;
+      text-align: center;
+      border: 1px solid $color_pricing;
+      color: $color_pricing;
+      text-transform: uppercase;
+      padding: 15px 50px;
+      @include fontAll(0.8rem, $font-weight2, "segoe ui light");
+      letter-spacing: 1px;
+      @include transition(0.33s, all);
+
+      &:hover {
+        color: $color_main;
+        background-color: $color_pricing;
+      }
+    }
+  }
 }
-
 
 /*---------------------------------------section instructor----------------------------*/
 
-
-
-
-
-
-
-
-
-
 @media (max-width: 992px) and (min-width: 768px) {
-
-    /*-------------------section instructor----------------- */
-    .instructor {
-        .card {
-            .img-cover {
-                .cover-icon {
-                    height: 99% !important;
-                }
+  /*-------------------section instructor----------------- */
+  .instructor {
+    .card {
+      .img-cover {
+        .cover-icon {
+          height: 99% !important;
         }
-        }
+      }
     }
-    /*-------------------section instructor----------------- */
+  }
+  /*-------------------section instructor----------------- */
 }
-
 
 @media (max-width: 576px) and (min-width: 400px) {
-    .teacher-head {
-        .teacher-content {
-            h1 {
-                font-size: $fontSize_mid + .8rem;
-            }
-        }
+  .teacher-head {
+    .teacher-content {
+      h1 {
+        font-size: $fontSize_mid + 0.8rem;
+      }
     }
+  }
 
-    /*-------------------section instructor----------------- */
-    .instructor {
-        .card {
-            .img-cover {
-                .cover-icon {
-                    height: 99% !important;
-                }
+  /*-------------------section instructor----------------- */
+  .instructor {
+    .card {
+      .img-cover {
+        .cover-icon {
+          height: 99% !important;
         }
-        }
+      }
     }
-    /*-------------------section instructor----------------- */
-
+  }
+  /*-------------------section instructor----------------- */
 }
 
-
-
 @media (max-width: 400px) and (min-width: 300px) {
-
-
-    .teacher-head {
-        .teacher-content {
-            h1 {
-                font-size: $fontSize_mid + .8rem;
-            }
-        }
+  .teacher-head {
+    .teacher-content {
+      h1 {
+        font-size: $fontSize_mid + 0.8rem;
+      }
     }
+  }
 
-    /*-------------------section instructor----------------- */
-    .instructor {
-        .instructor-head {
-            h1 {
-                font-size: $fontSize_mid + .5rem !important;
-            }
-        }
-        .card {
-            .img-cover {
-                .cover-icon {
-                    height: 98% !important;
-                }
-        }
-        }
+  /*-------------------section instructor----------------- */
+  .instructor {
+    .instructor-head {
+      h1 {
+        font-size: $fontSize_mid + 0.5rem !important;
+      }
     }
-    /*-------------------section instructor----------------- */
-
-    
+    .card {
+      .img-cover {
+        .cover-icon {
+          height: 98% !important;
+        }
+      }
+    }
+  }
+  /*-------------------section instructor----------------- */
 }

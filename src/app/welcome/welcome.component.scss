@@ -1,173 +1,134 @@
+@import "../Scss/utils/colors";
+@import "../Scss/utils/fonts";
+@import "../Scss/utils/mixins";
+@import "../Scss/utils/spacing";
 
-
-
-
-@import '../Scss/utils/colors';
-@import '../Scss/utils/fonts';
-@import '../Scss/utils/mixins';
-@import '../Scss/utils/spacing';
-
-
-
-
-
-
-
-
+body {
+    overflow-y: hidden !important;
+}
 
 /*----------------------------------section welcome--------------------------------*/
 .welcome {
-    .welcome-title {
-        h1 {
-            font-size:$fontSize_large;
-            font-family: sans-serif;
-            font-weight: $font-weight3;
-            color: $color_secondry;
-            span {
-                font-size: $fontSize_large;
-                font-family: $font-family4;
-                color: $color_content3;
-                span {
-                    color: $color_span;
-                }
-            }
+  .welcome-title {
+    h1 {
+      font-size: $fontSize_large;
+      font-family: sans-serif;
+      font-weight: $font-weight3;
+      color: $color_secondry;
+      span {
+        font-size: $fontSize_large;
+        font-family: $font-family4;
+        color: $color_content3;
+        span {
+          color: $color_span;
         }
-    
-        p {
-            color: $color_content2;
-            font-size: $fontSize_small + .1rem;
-            font-weight: $font-weight1;
-        }
+      }
     }
 
-    .brdr {
-       
-        .welcome-body {
-            border: 1px solid #f2f2f2;
-            border-radius: 3px;
-            .icon {
-                width: 100px;
-                margin: auto;
-                i {
-                    background-color: $color_content3;
-                    padding: 20px;
-                    position: relative;
-                    border-radius:50% ;
-                    bottom: $space_large ;
-                    box-shadow: 0px 0px 0px 6px #e8f7eb;
-                    
-                }
-            }
-            h3 {
-                @include fontAll($fontSize_mid, $font-weight2, sans-serif );
-                @include transition(.33s, color);
-                padding-bottom: 10px;
-
-
-                &:hover {
-                    color: $color_content3;
-                }
-            }
-
-            p {
-                color: $color_p;
-                font-weight: $font-weight2;
-                font-family: $font-family3;
-                font-size: $fontSize_small + .1rem;
-                padding-bottom: $space_small;
-
-            }
-        }
+    p {
+      color: $color_content2;
+      font-size: $fontSize_small + 0.1rem;
+      font-weight: $font-weight1;
     }
+  }
+
+  .brdr {
+    .welcome-body {
+      border: 1px solid #f2f2f2;
+      border-radius: 3px;
+      .icon {
+        width: 100px;
+        margin: auto;
+        i {
+          background-color: $color_content3;
+          padding: 20px;
+          position: relative;
+          border-radius: 50%;
+          bottom: $space_large;
+          box-shadow: 0px 0px 0px 6px #e8f7eb;
+        }
+      }
+      h3 {
+        @include fontAll($fontSize_mid, $font-weight2, sans-serif);
+        @include transition(0.33s, color);
+        padding-bottom: 10px;
+
+        &:hover {
+          color: $color_content3;
+        }
+      }
+
+      p {
+        color: $color_p;
+        font-weight: $font-weight2;
+        font-family: $font-family3;
+        font-size: $fontSize_small + 0.1rem;
+        padding-bottom: $space_small;
+      }
+    }
+  }
 }
-
 
 /*----------------------------------section welcome--------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1024px) and (min-width: 992px) {
-    /*-------------------section welcome----------------- */
-    .welcome {
-        .brdr {
-            .welcome-body {
-                p {
-                    font-size: $fontSize_small;
-                    br {
-                        display: none !important;
-                    }
-                }
-            }
+  /*-------------------section welcome----------------- */
+  .welcome {
+    .brdr {
+      .welcome-body {
+        p {
+          font-size: $fontSize_small;
+          br {
+            display: none !important;
+          }
         }
+      }
     }
-    /*-------------------section welcome----------------- */
-
-
-
-    
+  }
+  /*-------------------section welcome----------------- */
 }
-
-
 
 @media (max-width: 992px) and (min-width: 768px) {
-    
-    /*-------------------section welcome----------------- */
-    .welcome {
-        .brdr {
-            .welcome-body {
-                margin: auto !important;
-                p {
-                    font-size: $fontSize_small;
-                    br {
-                        display: none !important;
-                    }
-                }
-
-            }
+  /*-------------------section welcome----------------- */
+  .welcome {
+    .brdr {
+      .welcome-body {
+        margin: auto !important;
+        p {
+          font-size: $fontSize_small;
+          br {
+            display: none !important;
+          }
         }
+      }
     }
-    /*-------------------section welcome----------------- */
+  }
+  /*-------------------section welcome----------------- */
 }
-
-
-
 
 @media (max-width: 576px) and (min-width: 400px) {
-
-    /*-------------------section welcome----------------- */
-    .welcome {
-        .welcome-title {
-            br {
-                display: none !important;
-            }
-        }
+  /*-------------------section welcome----------------- */
+  .welcome {
+    .welcome-title {
+      br {
+        display: none !important;
+      }
     }
-    /*-------------------section welcome----------------- */
+  }
+  /*-------------------section welcome----------------- */
 }
 
-
-
 @media (max-width: 400px) and (min-width: 300px) {
-    
-     /*-------------------section welcome----------------- */
-     .welcome {
-        .welcome-title {
-            h1 {
-                font-size: $fontSize_mid + .5rem;
-            }
-            br {
-                display: none !important;
-            }
-        }
+  /*-------------------section welcome----------------- */
+  .welcome {
+    .welcome-title {
+      h1 {
+        font-size: $fontSize_mid + 0.5rem;
+      }
+      br {
+        display: none !important;
+      }
     }
-    /*-------------------section welcome----------------- */
+  }
+  /*-------------------section welcome----------------- */
 }
