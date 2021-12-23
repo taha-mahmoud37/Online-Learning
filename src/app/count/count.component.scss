@@ -1,57 +1,46 @@
-@import '../Scss/utils/colors';
-@import '../Scss/utils/fonts';
-@import '../Scss/utils/mixins';
-
-
-
-
+@import "../Scss/utils/colors";
+@import "../Scss/utils/fonts";
+@import "../Scss/utils/mixins";
 
 /*---------------------------------------section count----------------------------*/
 
 .count {
-    background-color: $counter-color;
-    .count-content {
-        .icons {
-            i {
-                color: $color_span ;
-                
-            }
-        }
-        .counter {
-            @include fontAll($fontSize_large, $font-weight3, sans-serif);
-            color: $color_main;
-        }
-        p {
-            color: $color_main;
-            @include fontAll( $fontSize_small + .2rem, 400, $font_family1);
-        }
+  background-color: $counter-color;
+  .count-content {
+    .icons {
+      i {
+        color: $color_span;
+      }
     }
+    .counter {
+      @include fontAll($fontSize_large, $font-weight3, sans-serif);
+      color: $color_main;
+    }
+    p {
+      color: $color_main;
+      @include fontAll($fontSize_small + 0.2rem, 400, $font_family1);
+    }
+  }
 }
 
 /*---------------------------------------section count----------------------------*/
 
+@media (max-width: 768px) and (min-width: 576px) {
+  /*-------------------section count----------------- */
 
-
-
-
-@media (max-width:768px) and (min-width: 576px) {
-    /*-------------------section count----------------- */
-
-    .count {
-        .count-content {
-            .icons {
-                i {
-                    font-size: $fontSize_mid + .8rem !important;
-                }
-            }
-
-            .counter {
-                font-size: $fontSize_mid + .5rem;       
-            }
+  .count {
+    .count-content {
+      .icons {
+        i {
+          font-size: $fontSize_mid + 0.8rem !important;
         }
+      }
+
+      .counter {
+        font-size: $fontSize_mid + 0.5rem;
+      }
     }
+  }
 
-    /*-------------------section count----------------- */
-
-
+  /*-------------------section count----------------- */
 }

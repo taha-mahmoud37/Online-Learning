@@ -1,234 +1,210 @@
-@import '../../Scss/utils/colors';
-@import '../../Scss/utils/fonts';
-@import '../../Scss/utils/spacing';
-@import '../../Scss/utils/mixins';
-@import '../../Scss/components/heads';
-@import '../../Scss/components/buttons';
+@import "../../Scss/utils/colors";
+@import "../../Scss/utils/fonts";
+@import "../../Scss/utils/spacing";
+@import "../../Scss/utils/mixins";
+@import "../../Scss/components/heads";
+@import "../../Scss/components/buttons";
 
 body {
-    overflow-x: hidden !important ;
+  overflow-x: hidden !important ;
 }
 
 /*-----------------------------------------about-head----------------------------*/
 
 .about-head {
-    background: linear-gradient(to top, rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-    url('../../../assets/images/6.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 300px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../../../assets/images/6.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
 
-    .about-content {
-        height: 100%;
-        text-align: center;
-        h1 {
-            color: $color_main;
-            font-size: $fontSize_large + .9rem;
-            font-weight: $font-weight3;
-            letter-spacing: 2px;
-        }
-
-        .about-links {
-            ul {
-                position: relative;
-                li {
-                    a {
-                        text-decoration: none;
-                        color: $color_main;
-                        font-size: $fontSize_small + .6rem;
-                        font-weight: $font-weight1;
-                        @include transition(.33s, color);
-                    }
-                    .home:hover {
-                        color: $color_span;
-                    }
-                }
-                .after::after {
-                      position: absolute;
-                      content: '/';
-                      top: 7px;
-                      color: $color_main;
-                      font-size: $fontSize_small + .2rem;
-                }
-            }
-            
-        }
+  .about-content {
+    height: 100%;
+    text-align: center;
+    h1 {
+      color: $color_main;
+      font-size: $fontSize_large + 0.9rem;
+      font-weight: $font-weight3;
+      letter-spacing: 2px;
     }
+
+    .about-links {
+      ul {
+        position: relative;
+        li {
+          a {
+            text-decoration: none;
+            color: $color_main;
+            font-size: $fontSize_small + 0.6rem;
+            font-weight: $font-weight1;
+            @include transition(0.33s, color);
+          }
+          .home:hover {
+            color: $color_span;
+          }
+        }
+        .after::after {
+          position: absolute;
+          content: "/";
+          top: 7px;
+          color: $color_main;
+          font-size: $fontSize_small + 0.2rem;
+        }
+      }
+    }
+  }
 }
 
 /*-----------------------------------------about-head----------------------------*/
 
-
-
-
-
 /*-----------------------------------------section pricing----------------------------*/
 
 .pricing {
-    .pricing-head {
-        h3 {
-            @include fontAll($fontSize_mid + .8rem, $font-weight3, $font-family-alt);
-            color: $color_secondry;
+  .pricing-head {
+    h3 {
+      @include fontAll($fontSize_mid + 0.8rem, $font-weight3, $font-family-alt);
+      color: $color_secondry;
 
-            span {
-                font-weight: 200;
-            }
-        }
-        p {
-            color: $color_p;
-            font-size: $fontSize_small + .2rem;
-        }
+      span {
+        font-weight: 200;
+      }
+    }
+    p {
+      color: $color_p;
+      font-size: $fontSize_small + 0.2rem;
+    }
+  }
+
+  .pricing-content {
+    p {
+      font-size: $fontSize_small;
+      font-weight: $font-weight2;
+      color: $color_secondry;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .dollar-content {
+      color: $color_secondry;
+      .dollar-sign {
+        font-size: $fontSize_mid + 0.5rem;
+        font-weight: $font-weight2;
+        position: relative;
+        bottom: 4px;
+      }
+      .pricing-num {
+        font-size: $fontSize_large;
+        font-weight: $font-weight3;
+        font-family: $font-family1;
+      }
+      sup {
+        font-size: $fontSize_mid + 0.2rem;
+        font-weight: $font-weight3;
+        font-family: $font-family1;
+        position: relative;
+        left: 5px;
+      }
+      sub {
+        font: size 0.7rem;
+        font-weight: $font-weight1;
+        text-transform: uppercase;
+        position: relative;
+        right: 5px;
+      }
     }
 
-    
-
-    .pricing-content {
-        
-        
-        p {
-            font-size: $fontSize_small;
-            font-weight: $font-weight2;
-            color: $color_secondry;
-            letter-spacing: 2px;
-            text-transform: uppercase;
+    .discount {
+      color: $color_p;
+      font-size: $fontSize_small;
+      li {
+        padding-bottom: 0.5rem;
+        font-weight: 400;
+        .btn {
+          @extend .non-shadow;
+          padding: 0.8rem $space_mid + 0.2rem;
+          margin-top: $space_small + 0.4rem;
+          border: 1px solid #dadada;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          color: $color_secondry;
+          font-size: 0.8rem;
+          font-weight: $font-weight2;
         }
-        .dollar-content {
-            color: $color_secondry;
-            .dollar-sign {
-                font-size: $fontSize_mid + .5rem;
-                font-weight: $font-weight2;
-                position: relative;
-                bottom: 4px;
-            }
-            .pricing-num {
-                font-size: $fontSize_large;
-                font-weight: $font-weight3;
-                font-family: $font-family1;
-            }
-            sup {
-                font-size: $fontSize_mid + .2rem;
-                font-weight: $font-weight3;
-                font-family: $font-family1;
-                position: relative;
-                left: 5px;
-            }
-            sub {
-                font: size 0.7rem;
-                font-weight: $font-weight1;
-                text-transform: uppercase;
-                position: relative;
-                right: 5px;
-            }
-        }
-
-        .discount {
-            color: $color_p;
-            font-size: $fontSize_small;
-            li {
-                padding-bottom: .5rem;
-                font-weight: 400;
-                .btn {
-                    @extend .non-shadow;
-                    padding: .8rem $space_mid + .2rem;
-                    margin-top: $space_small + .4rem;
-                    border: 1px solid #dadada;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    color: $color_secondry;
-                    font-size: .8rem;
-                    font-weight: $font-weight2;
-                }
-            }
-            .muted {
-
-                text-decoration: line-through;
-                color: #d6d6d6;
-            }
-
-        
-        
-        
-        
-        
-        }
-        &:hover ,
-        &:hover p,
-        &:hover li, 
-        &:hover li .btn ,
-        &:hover .dollar-content {
-            color: $color_main !important;
-            background-color: $color_span;
-        }
-        &:hover .muted {
-            color: #d6d6d6 !important;
-        }
-        &:hover li .btn {
-            border-color: $color_main !important;
-        }
+      }
+      .muted {
+        text-decoration: line-through;
+        color: #d6d6d6;
+      }
     }
-
+    &:hover,
+    &:hover p,
+    &:hover li,
+    &:hover li .btn,
+    &:hover .dollar-content {
+      color: $color_main !important;
+      background-color: $color_span;
+    }
+    &:hover .muted {
+      color: #d6d6d6 !important;
+    }
+    &:hover li .btn {
+      border-color: $color_main !important;
+    }
+  }
 }
 
 /*-----------------------------------------section pricing----------------------------*/
 
-
-
-
-
-
-@media (max-width: 992px) and (min-width: 768px){
-    .pricing {
-        .pricing-head {
-            h3 {
-                font-size: $fontSize_small + .6rem;
-            }
-            p {
-                br {
-                    display: none;
-                }
-            }
+@media (max-width: 992px) and (min-width: 768px) {
+  .pricing {
+    .pricing-head {
+      h3 {
+        font-size: $fontSize_small + 0.6rem;
+      }
+      p {
+        br {
+          display: none;
         }
+      }
     }
+  }
 }
 
-
-@media (max-width: 768px) and (min-width: 576px){
-    .pricing {
-        .pricing-head {
-            h3 {
-                font-size: $fontSize_small + .6rem;
-            }
-            p {
-                font-size: $fontSize_small;
-                br {
-                    display: none;
-                }
-            }
+@media (max-width: 768px) and (min-width: 576px) {
+  .pricing {
+    .pricing-head {
+      h3 {
+        font-size: $fontSize_small + 0.6rem;
+      }
+      p {
+        font-size: $fontSize_small;
+        br {
+          display: none;
         }
+      }
     }
+  }
 }
 
-@media (max-width: 576px) and (min-width: 300px){
-    .about-head {
-        .about-content {
-            h1 {
-                font-size: $fontSize_mid + .8rem;
-            }
-        }
+@media (max-width: 576px) and (min-width: 300px) {
+  .about-head {
+    .about-content {
+      h1 {
+        font-size: $fontSize_mid + 0.8rem;
+      }
     }
-    .pricing {
-        .pricing-head {
-            h3 {
-                font-size: $fontSize_small + .6rem;
-            }
-            p {
-                font-size: $fontSize_small;
-                br {
-                    display: none;
-                }
-            }
+  }
+  .pricing {
+    .pricing-head {
+      h3 {
+        font-size: $fontSize_small + 0.6rem;
+      }
+      p {
+        font-size: $fontSize_small;
+        br {
+          display: none;
         }
+      }
     }
+  }
 }
-
