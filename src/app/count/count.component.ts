@@ -15,13 +15,14 @@ export class CountComponent implements OnInit {
     ngOnInit(): void {
  
     }
+    
     /* count 1 for student*/ 
-    count1 = 0;
-    studentCount:any = setInterval(() => {
-        this.count1++;
+    studentCount = 0;
+    studentsCount:any = setInterval(() => {
+        this.studentCount++;
 
-        if (this.count1 == 1500) {
-            clearInterval(this.studentCount);
+        if (this.studentCount == 1500) {
+            clearInterval(this.studentsCount);
         }
     }, 2);
 
@@ -29,36 +30,36 @@ export class CountComponent implements OnInit {
 
 
     /* count 2 for courese*/ 
-    count2 = 0;
-    studentCount2:any = setInterval(() => {
-        this.count2++;
+    courseCount = 0;
+    coursesCount:any = setInterval(() => {
+        this. courseCount++;
 
-        if (this.count2 == 700) {
-            clearInterval(this.studentCount2);
+        if (this. courseCount == 700) {
+            clearInterval(this.coursesCount);
         }
     }, 5);
 
     /* count 2 for courese*/
 
     /* count 3 for rating*/ 
-    count3 = 0;
-    studentCount3:any = setInterval(() => {
-        this.count3++;
+    ratingCount = 0;
+    ratingsCount:any = setInterval(() => {
+        this.ratingCount++;
  
-        if (this.count3 == 500) {
-            clearInterval(this.studentCount3);
+        if (this.ratingCount == 500) {
+            clearInterval(this.ratingsCount);
         }
     }, 7);
  
     /* count 3 for rating*/ 
 
     /* count 4 for project*/ 
-    count4 = 0;
-    studentCount4:any = setInterval(() => {
-        this.count4++;
+    projectCount = 0;
+    projectsCount:any = setInterval(() => {
+        this.projectCount++;
 
-        if (this.count4 == 300) {
-            clearInterval(this.studentCount4);
+        if (this.projectCount == 300) {
+            clearInterval(this.projectsCount);
         }
     }, 9);
 
