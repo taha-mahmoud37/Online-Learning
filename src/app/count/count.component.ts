@@ -32,9 +32,9 @@ export class CountComponent implements OnInit {
     /* count 2 for courese*/ 
     courseCount = 0;
     coursesCount:any = setInterval(() => {
-        this. courseCount++;
+        this.courseCount++;
 
-        if (this. courseCount == 700) {
+        if (this.courseCount == 700) {
             clearInterval(this.coursesCount);
         }
     }, 5);
