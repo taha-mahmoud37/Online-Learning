@@ -37,7 +37,7 @@ export class CountComponent implements OnInit {
         if (this.courseCount == 1000) {
             clearInterval(this.coursesCount);
         }
-    }, 10);
+    }, 7);
 
     /* count 2 for courese*/
 
