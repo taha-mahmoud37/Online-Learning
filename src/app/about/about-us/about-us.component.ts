@@ -37,12 +37,12 @@ export class AboutUsComponent implements OnInit {
     /* count 2 for courese*/ 
     courseCount = 0;
     coursesCount:any = setInterval(() => {
-        this. courseCount++;
+        this.courseCount++;
 
-        if (this. courseCount == 700) {
+        if (this.courseCount == 1000) {
             clearInterval(this.coursesCount);
         }
-    }, 5);
+    }, 7);
 
     /* count 2 for courese*/
 
@@ -51,10 +51,10 @@ export class AboutUsComponent implements OnInit {
     ratingsCount:any = setInterval(() => {
         this.ratingCount++;
 
-        if (this.ratingCount == 500) {
+        if (this.ratingCount == 800) {
             clearInterval(this.ratingsCount);
         }
-    }, 7);
+    }, 10);
 
     /* count 3 for rating*/ 
 
@@ -63,7 +63,7 @@ export class AboutUsComponent implements OnInit {
     projectsCount:any = setInterval(() => {
         this.projectCount++;
 
-        if (this.projectCount == 300) {
+        if (this.projectCount == 500) {
             clearInterval(this.projectsCount);
         }
     }, 9);
